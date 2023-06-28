@@ -1,1 +1,1 @@
-web: gunicorn dieumerci_k_zigabe.wsgi
+web: gunicorn dieumerci_k_zigabe.wsgi --log-file -

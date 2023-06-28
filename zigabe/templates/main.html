@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth" dir="ltr">
+  
+<!-- Mirrored from themihub.com/html/morex-demo/morex/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Jun 2023 15:30:59 GMT -->
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZIGABE</title>
+ 
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/images/icon_logo.ico' %}">
+    <!-- Google fonts -->
+
+     <!-- Plugins css -->
+    <link rel="stylesheet" href="{% static 'assets/css/mobilemenu.css' %}" />
+    <!-- <link rel="stylesheet" href="./assets/css/glightbox.min.css" /> -->
+    <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"  />
+    
+    <!-- Tailwind css -->
+
+    <link rel="stylesheet" href="{% static 'assets/css/styles.css' %}" />
+    <script>
+      // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+      if (localStorage.getItem("theme-color") === "dark" || (!("theme-color" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+        document.documentElement.classList.add("dark");
+      } 
+      if (localStorage.getItem("theme-color") === "light") {
+        document.documentElement.classList.remove("dark");
+      } 
+    </script>
+    
+  </head>
+  <body class="font-rubik dark:bg-dark_primary_bg">
+
+    {% block content %}
+
+    {% endblock %}
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <!-- imagesloaded js -->
+  <script src="{% static 'assets/js/imagesloaded.pkgd.min.js' %}" defer></script>
+
+  <!-- Isotope js -->
+  <script src="{% static 'assets/js/isotope.pkgd.min.js' %}" defer></script>
+
+<!-- Custom js -->
+  <script src="{% static 'assets/js/script.js' %}" defer></script>
+
+  
+</body>
+
+<!-- Mirrored from themihub.com/html/morex-demo/morex/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Jun 2023 15:31:06 GMT -->
+</html>

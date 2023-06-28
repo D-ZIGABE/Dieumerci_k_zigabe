@@ -9,15 +9,15 @@ SECRET_KEY = os.environ['SECRET_KEY']
 #for heroku
 #DATABASES['default'] = dj_database_url.config()
 #for RDS AWS
-db_from_env = dj_database_url.config(conn_max_age=600)
-DATABASES['default'].update(db_from_env)
+#db_from_env = dj_database_url.config(conn_max_age=600)
+#DATABASES['default'].update(db_from_env)
 
 
 
 MIDDLEWARE +=['whitenoise.middleware.WhiteNoiseMiddleware',]
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage' 
-ALLOWED_HOSTS = ['web-production-456f.up.railway.app','clinovie.org','www.clinovie.org']
-CSRF_TRUSTED_ORIGINS = ['https://web-production-456f.up.railway.app','https://clinovie.org']
+ALLOWED_HOSTS = ['web-production-89dd.up.railway.app',]
+CSRF_TRUSTED_ORIGINS = ['https://web-production-89dd.up.railway.app/',]
 
 """
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
